@@ -1,0 +1,36 @@
+-
+  var about = {
+    header: 'Только надежное оборудование для строительства и монтажа',
+    subheader: 'Аренда спецтехники Liebherr, Caterpillar, Hitachi, XCMG и других марок',
+    text: 'Возьмите в аренду строительную технику в Самаре – и будьте уверены, что она не подведет в ответственный момент. В нашем автопарке собраны машины мировых производителей, они:',
+    list: [
+      'зарегистрированы в Ростехнадзоре и аккредитованы в обществах группы компаний «Роснефть» – есть необходимые подтверждающие документы;',
+      'регулярно проходят технический осмотр – периодичность около 3 раз в год в соответствии с регламентом для каждой марки.',
+    ],
+    text2: 'Благодаря чему мы уверены, что все краны, катки, подъемники, самосвалы и остальная спецтехника в отличном состоянии. Если вдруг случится так, что во время работы оборудование выйдет из строя – просто сообщите об этом, максимально быстро предоставим на замену машину аналогичной или большей мощности без доплаты.',
+    images: [
+      'img/about-01.jpg',
+      'img/about-02.jpg',
+    ],
+    link: { href: '#', text: 'Узнать больше о компании по аренде спецтехники' }
+  }
+
+.about#about
+  .container
+    h2.about__header.wow.fadeInDown(data-wow-duration="1s") !{about.header}
+    p.about__subheader.subheader.wow.fadeInDown(data-wow-delay=".5s" data-wow-duration="1s") !{about.subheader}
+    .section_gallery
+      each i in about.images
+        //- a(href=i)
+          img(src=i, alt="")
+        img(src=i, alt="")
+    .about__inner
+      .about__text.wow.fadeInDown(data-wow-delay="1s" data-wow-duration="1s")
+        p !{about.text}
+        ul
+          each li in about.list
+            li !{li}
+        p !{about.text2}
+      .bottom_link.wow.fadeInDown(data-wow-delay="1.5s" data-wow-duration="1s")
+        a.about__link(href=about.link.href) !{about.link.text}
+    .about__parallax.parallax.skrollable.skrollable-between(data-top="transform: translateY(0%);" data-bottom="transform: translateY(-30%);")

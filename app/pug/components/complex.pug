@@ -1,0 +1,26 @@
+-
+  var complex = {
+    header: 'Комплексное предложение для максимальной выгоды',
+    subheader: 'Изготовление металлоконструкций и аренда спецтехники',
+    text: 'Второе направление нашей компании – проектирование, изготовление и монтаж металлических конструкций. При одновременном заказе этой услуги и аренды спецтехники вы сократите расходы примерно на 10–25 % – предоставим персональную скидку. ',
+    images: [
+      'img/complex-01.jpg',
+      'img/complex-02.jpg',
+    ],
+    button: { href: '#', text: 'Подробнее об услуге' }
+  }
+
+.complex#complex
+  .container
+    h2.complex__header.wow.fadeInDown(data-wow-duration="1s") !{complex.header}
+    p.complex__subheader.subheader.wow.fadeInDown(data-wow-delay=".5s" data-wow-duration="1s") !{complex.subheader}
+    .section_gallery
+      each i in complex.images
+        //- a(href=i)
+          img(src=i, alt="")
+        img(src=i, alt="")
+    .complex__inner
+      p.complex__text.wow.fadeInDown(data-wow-delay="1s" data-wow-duration="1s") !{complex.text}
+      a.complex__button.btn.btn_green.wow.fadeInDown(data-wow-delay="1.5s" data-wow-duration="1s")(href=complex.button.href) !{complex.button.text}
+    .complex__parallax.parallax.skrollable.skrollable-between(data-top="transform: translateY(-30%);" data-bottom="transform: translateY(0%);")
+    .complex__parallax2.parallax.skrollable.skrollable-between(data-top="transform: translateY(30%);" data-bottom="transform: translateY(-30%);")

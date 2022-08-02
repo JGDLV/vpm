@@ -1,0 +1,19 @@
+-
+  var intro = {
+    header: 'Услуги аренды спецтехники <br>в Самаре и других городах России',
+    text: 'Собственный автопарк из машин грузоподъемностью <br>до 250 тонн ',
+    text2: 'Поможем выбрать спецтехнику для аренды',
+    image: 'img/intro-image.png',
+    button: { href: '#consult', text: 'заказать консультацию' }
+  }
+
+.intro#intro
+  .container
+    .intro__parallax.parallax(data-top="transform: translateY(0%);" data-bottom="transform: translateY(50%);")
+    h1.intro__header.wow.fadeInDown(data-wow-delay=".5s" data-wow-duration="1s") !{intro.header}
+    p.intro__text.wow.fadeInDown(data-wow-delay="1s" data-wow-duration="1s") !{intro.text}
+    .intro__bottom.flex.aic.wow.fadeInDown(data-wow-delay="1.5s" data-wow-duration="1s")
+      a.intro__button.btn.btn_yellow(href=intro.button.href)
+        span !{intro.button.text}
+      p.intro__bottom-text !{intro.text2}
+    img.intro__image.wow.fadeInDown(src=intro.image, alt="" data-wow-duration="1s")

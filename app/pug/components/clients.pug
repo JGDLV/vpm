@@ -1,0 +1,32 @@
+-
+  var clients = {
+    header: 'Среди наших клиентов ПАО «НК Роснефть», АО «Транснефть-Приволга» <br>и другие крупные компании',
+    subheader: 'Услуги спецтехники в Самаре для юридических и физических лиц',
+    items: [
+      'img/clients-01.png',
+      'img/clients-02.png',
+      'img/clients-03.png',
+      'img/clients-04.png',
+      'img/clients-05.png',
+      'img/clients-06.png',
+      'img/clients-07.png',
+      'img/clients-08.png',
+      'img/clients-09.png',
+      'img/clients-10.png',
+      'img/clients-11.png',
+      'img/clients-12.png',
+    ],
+    link: { href: '#', text: 'Полный список клиентов' }
+  }
+
+.clients#clients
+  .container
+    h2.clients__header.wow.fadeInDown(data-wow-duration="1s") !{clients.header}
+    p.clients__subheader.subheader.wow.fadeInDown(data-wow-delay=".5s" data-wow-duration="1s") !{clients.subheader}
+    .clients-items
+      each item in clients.items
+        .clients__item.flex.jcc.aic
+          img.clients__item-image(src=item, alt='')
+    .clients__bottom
+      .bottom_link.wow.fadeInDown(data-wow-delay="1.5s" data-wow-duration="1s")
+        a.clients__link(href=clients.link.href) !{clients.link.text}

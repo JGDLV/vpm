@@ -1,0 +1,40 @@
+-
+  var projects = {
+    header: 'Сдаем оборудование с 2003 года',
+    subheader: 'Проекты, в которых участвовала арендованная у нас спецтехника',
+    items: [
+      {
+        image: 'img/image 1.jpg',
+        header: '«Тольяттиазот»',
+        text: 'Монтаж технологического оборудования и металлоконструкций'
+      },
+      {
+        image: 'img/image 2.jpg',
+        header: 'ОЭЗ «Тольятти»',
+        text: 'Монтаж, в нем приняло участие 12 мостовых кранов грузоподъемностью 20 и 40 т'
+      },
+      {
+        image: 'img/image 3.jpg',
+        header: '«РН-Бурение»',
+        text: 'Сбор и разбор нефтевышек, а также их транспортировка'
+      },
+    ],
+    link: { href: '#', text: 'Все проекты' }
+  }
+
+.projects#projects
+  .container
+    h2.projects__header.wow.fadeInDown(data-wow-duration="1s") !{projects.header}
+    p.projects__subheader.subheader.wow.fadeInDown(data-wow-delay=".5s" data-wow-duration="1s") !{projects.subheader}
+    .projects-items
+      each item in projects.items
+        a.projects__item(href="#") 
+          span.projects__item-image-part
+            img.projects__item-image(src=item.image, alt='')
+          span.projects__item-text-part
+            span.projects__item-header(href="#")  !{item.header}
+            span.projects__item-text !{item.text}
+    .projects__bottom.wow.fadeInDown(data-wow-delay="1s" data-wow-duration="1s")
+      .bottom_link
+        a.projects__link(href=projects.link.href) !{projects.link.text}
+    .projects__parallax.parallax.skrollable.skrollable-between(data-top="transform: translateY(-30%);" data-bottom="transform: translateY(0%);")

@@ -1,0 +1,15 @@
+-
+  var cta = {
+    header: 'Оставьте заявку, а если не знаете, какую спецтехнику взять в аренду – ',
+    subheader: 'посоветуем подходящий вариант и поможем избежать лишних расходов',
+    image: 'img/cta-image.png',
+    button: { href: '#consult', text: 'заказать консультацию' }
+  }
+
+.cta#cta
+  .container
+    h2.cta__header.wow.fadeInDown(data-wow-delay=".5s" data-wow-duration="1s") !{cta.header}
+    p.cta__subheader.subheader.wow.fadeInDown(data-wow-delay="1s" data-wow-duration="1s") !{cta.subheader}
+    a.cta__button.btn.btn_yellow.wow.fadeInDown(data-wow-delay="1.5s" data-wow-duration="1s")(href=cta.button.href)
+      span !{cta.button.text}
+    img.cta__image.wow.fadeInDown(src=cta.image, alt="" data-wow-duration="1s")

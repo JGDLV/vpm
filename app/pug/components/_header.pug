@@ -1,0 +1,95 @@
+-
+  var clearPhone = function(x) {
+    return x.replace(/\D/g, '');
+  }
+
+  var header = {
+    logo: 'img/logo.png',
+    tagline: 'Услуги спецтехники в Самаре и других городах России. Изготовление металлоконструкций',
+    address: 'Самара, ул. Елизарова, д. 103',
+    email: 'arenda@vpm.ru',
+    phone: '+7 (846) 958-66-27',
+    whours: 'Будни с 8:00 до 17:00',
+    button: { href: '#callback', text: 'Обратный звонок' }
+  }
+
+  var menu = [
+    {
+      href: '#',
+      text: 'О нас',
+      submenu: [
+        { href: '#', text: 'О компании' },
+        { href: '#', text: 'Наши клиенты' },
+        { href: '#', text: 'Портфолио' },
+        { href: '#', text: 'Отзывы' },
+        { href: '#', text: 'Новости' },
+      ]
+    },
+    {
+      href: '#',
+      text: 'Каталог техники',
+      submenu: [
+        {
+          href: '#',
+          text: 'Автокраны',
+          submenu: [
+            { href: '#', text: 'Автокраны 25 т' },
+            { href: '#', text: 'Автокраны 30 т' },
+            { href: '#', text: 'Автокраны 32 т' },
+            { href: '#', text: 'Автокраны 50 т' },
+            { href: '#', text: 'Автокраны 55 т' },
+            { href: '#', text: 'Автокраны 70 т' },
+            { href: '#', text: 'Автокраны 100 т' },
+            { href: '#', text: 'Автокраны 130 т' },
+            { href: '#', text: 'Автокраны 160 т' },
+            { href: '#', text: 'Автокраны 180 т' },
+            { href: '#', text: 'Автокраны 200 т' },
+            { href: '#', text: 'Автокраны 250 т' },
+          ]
+        },
+        { href: '#', text: 'Гидроподъемники' },
+        { href: '#', text: 'Катки' },
+        { href: '#', text: 'Полуприцепы' },
+        { href: '#', text: 'Погрузчики' },
+        { href: '#', text: 'Самосвалы' },
+        { href: '#', text: 'Экскаваторы' },
+        { href: '#', text: 'Башенный кран' },
+        { href: '#', text: 'Кран МКГ-25БР' },
+        { href: '#', text: 'Бортовой КАМАЗ' },
+        { href: '#', text: 'Тралы' },
+      ]
+    },
+    { href: '#', text: 'Условия аренды' },
+    { href: '#', text: 'Прайс-лист' },
+    { href: '#', text: 'Металлоконструкции' },
+    { href: '#', text: 'Контакты' },
+  ]
+
+header.header
+  .header__top
+    .container
+      .header__top-inner.flex.jcsb.aic
+        include header/logo.pug
+        include header/tagline.pug
+        .header__contacts.header__contacts_1
+          include header/address.pug
+          include header/email.pug
+        .header__contacts.header__contacts_2
+          include header/phone.pug
+          include header/whours.pug
+        include header/button.pug
+  .header__bottom
+    .container
+      include header/menu.pug
+
+.header-mobile
+  .header-mobile__top
+    include header/mobile-menu.pug
+    include header/logo.pug
+    include header/tagline.pug
+    .header__contacts
+      include header/phone.pug
+      include header/email.pug
+  .header-mobile__bottom
+    include header/menu.pug
+    include header/button.pug

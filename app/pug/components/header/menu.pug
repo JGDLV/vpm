@@ -1,0 +1,35 @@
+.menu
+  ul.menu-items.mobile-menu
+    each item in menu
+      if item.submenu
+        li.menu-item-has-children
+          a(href=item.href) !{item.text}
+          if item.submenu
+            ul
+              each i in item.submenu
+                if i.submenu
+                  li.menu-item-has-children
+                    a(href=i.href) !{i.text}
+                    if i.submenu
+                      ul
+                        each x in i.submenu
+                          li
+                            a(href=x.href) !{x.text}
+                else
+                  li
+                    a(href=i.href) !{i.text}
+                    if i.submenu
+                      ul
+                        each x in i.submenu
+                          li
+                            a(href=x.href) !{x.text}
+      else
+        li
+          a(href=item.href) !{item.text}
+          if item.submenu
+            ul
+              each i in item.submenu
+                li
+                  a(href=i.href) !{i.text}
+
+//- menu-item-has-children

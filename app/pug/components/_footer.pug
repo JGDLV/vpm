@@ -1,0 +1,26 @@
+-
+  var social = [
+    { href: '#', image: 'img/sprite.svg#instagram' },
+    { href: '#', image: 'img/sprite.svg#vk' },
+  ]
+
+footer.footer
+  .container
+    .footer__inner
+      .footer__left
+        a.footer__link(href="#") Политика конфиденциальности
+        p.copyright © 2021 ООО «Волгопродмонтаж»
+        p.developer Разработано: #[a.footer__link(href='https://1ps.ru/') 1PS.RU]
+      .footer__middle
+        .social
+          p.social__header Мы в соцсетях:
+          .social-items.flex.jcc
+            each i in social
+              a.social__item(href=i.href)
+                svg.social__item-image
+                  use(xlink:href=i.image)
+      .footer__right
+        include header/phone.pug
+        include header/whours.pug
+        include header/address.pug
+        include header/email.pug

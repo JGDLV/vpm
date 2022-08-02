@@ -1,0 +1,39 @@
+-
+  var scheme = {
+    header: 'Быстрая аренда строительной техники',
+    subheader: 'Обычно от звонка до подачи оборудования проходит 2–3 дня',
+    items: [
+      {
+        image: 'img/sprite.svg#scheme-01',
+        text: 'Выберите спецтехнику для аренды из каталога'
+      },
+      {
+        image: 'img/sprite.svg#scheme-02',
+        text: 'Заполните заявку – перезвоним вам'
+      },
+      {
+        image: 'img/sprite.svg#scheme-03',
+        text: 'Согласуйте стоимость и другие условия'
+      },
+      {
+        image: 'img/sprite.svg#scheme-04',
+        text: 'Заключите договор и внесите оплату'
+      },
+      {
+        image: 'img/sprite.svg#scheme-05',
+        text: 'Оборудование будет на объекте точно в срок'
+      },
+    ],
+  }
+
+.scheme#scheme
+  .container
+    h2.scheme__header.wow.fadeInDown(data-wow-duration="1s") !{scheme.header}
+    p.scheme__subheader.subheader.wow.fadeInDown(data-wow-delay=".5s" data-wow-duration="1s") !{scheme.subheader}
+    .scheme-items
+      each item in scheme.items
+        .scheme__item
+          .scheme__item-image-part
+            svg.scheme__item-image
+              use(xlink:href=item.image)
+          .scheme__item-text-part !{item.text}

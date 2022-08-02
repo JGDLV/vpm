@@ -1,0 +1,316 @@
+@media (min-width: 576px)
+  .container
+    // max-width: 540px
+
+@media (min-width: 768px)
+  .container
+    // max-width: 720px
+
+@media (min-width: 992px)
+  .container
+    // max-width: 960px
+
+@media (min-width: 1200px)
+  .container
+    max-width: 1200px
+
+@media (max-width: 1650px)
+  .complex
+    min-height: 530px
+  .complex__parallax
+    right: 0
+  .section_gallery
+    right: auto
+    left: 15px
+    width: 420px
+    & ~ *:not(.parallax)
+      padding-left: 450px
+    img:last-child
+      display: none
+  .about
+    &__text
+      max-width: 100%
+
+@media (max-width: 1400px)
+  .benefits__parallax,
+  .about__parallax
+    right: 0
+
+@media (max-width: 1919px)
+  .cta
+    // padding-bottom: 0
+    &__header
+      // max-width: 100%
+    &__subheader
+      // max-width: 100%
+    &__image
+      // position: static
+      display: block
+      margin-top: 30px
+      right: 0
+      // bottom: 0
+      // width: 560px
+  .intro
+    // padding-bottom: 40px
+    &__image
+      // position: static
+      // right: 0
+      // width: 560px
+      right: auto
+      left: 650px
+      display: block
+      margin-top: 30px
+      width: 46vw
+  // .section_gallery
+  //   position: static
+  //   margin: 0 auto 30px
+  //   justify-content: center
+  //   img
+  //     width: 50%
+  //     height: auto
+
+@media (max-width: 1200px)
+  header.header
+    display: none
+    &-mobile
+      display: block
+      box-shadow: 0 2px 8px 5px rgba(50, 50, 50, 0.07)
+      position: relative
+      &__top
+      &__bottom
+        display: none
+        .menu
+          & > ul
+            display: block
+            & > li
+              text-align: left
+              padding: 0 15px
+              border-bottom: 1px solid #e4e4e4
+              & > a
+                line-height: 40px
+              &::before, &::after
+                content: none
+              & > ul
+                display: none
+                opacity: 1
+                z-index: 51
+                position: static
+                box-shadow: none
+                transition: none
+                margin: 0 -15px
+                width: calc(100% + 30px)
+                & > li
+                  & > a
+                    border: 0
+                    border-top: 1px solid #e4e4e4
+                    padding-left: 25px
+                    line-height: 36px
+                    background: #f5f5f5
+                  &::after
+                    content: none
+  .menu-toggle
+    display: flex
+    right: 20px
+    border: 1px solid $yellow
+    .icon-toggle
+      span
+        background: $yellow
+  .menu > ul > li > ul > li > ul
+    display: none !important
+  .intro
+    padding: 40px 0
+    &__header
+      br
+        display: none
+    &__text
+      br
+        display: none
+    &__image
+      max-width: 100%
+      position: static
+      display: block
+      margin-top: 30px
+      width: auto
+  .benefits
+    padding: 40px 0
+    &-items
+      grid-template-columns: repeat(2, 1fr)
+      grid-row-gap: 50px
+  .catalog
+    padding: 40px 0
+  .complex
+    padding: 40px 0
+    min-height: 480px
+    &__text
+      max-width: 100%
+  .scheme
+    padding: 40px 0 10px
+    &-items
+      grid-template-columns: repeat(2, 1fr)
+    &__item
+      &::after
+        content: none
+  .advantages
+    padding: 40px 0
+    &-items
+      grid-template-columns: repeat(2, 1fr)
+  .projects
+    padding: 40px 0
+    &-items
+      grid-template-columns: repeat(3, 1fr)
+  .about
+    padding: 40px 0
+    &__text
+      max-width: 100%
+  .clients
+    padding: 40px 0
+    &__header
+      br
+        display: none
+  .cta
+    padding: 40px 0 0
+    &__header
+      max-width: 100%
+    &__subheader
+      max-width: 100%
+    &__image
+      position: static
+      width: auto
+      max-width: 100%
+      display: block
+      margin-top: 30px
+  #top
+    width: 40px
+    height: 40px
+  .copyright
+    margin: 6px 0
+  .footer
+    padding: 30px 0
+  .inner
+    .cta
+      padding: 40px 0
+
+@media (max-width: 1024px)
+  .section_gallery
+    position: static
+    width: 100%
+    justify-content: center
+    margin-bottom: 30px
+    img
+      display: block !important
+      width: 50%
+      height: auto
+    & ~ *
+      padding-left: 0 !important
+
+// @media (max-width: 992px)
+
+@media (max-width: 768px)
+  h1, h2, .subheader
+    line-height: normal !important
+  h1
+    font-size: 1.5em
+  h2
+    font-size: 1.25em
+  .subheader
+    font-size: 1.1em
+  .benefits
+    padding: 20px 0
+    &-items
+  .projects
+    &-items
+      grid-template-columns: repeat(1, 1fr)
+    &__item
+      &-image
+        &-part
+          height: auto
+          max-height: 100%
+  .intro__text
+    font-size: 1em
+    line-height: normal
+  .footer
+    &__inner
+      grid-template-columns: repeat(2, 1fr)
+    &__left
+      order: 0
+    &__middle
+      order: 2
+      grid-column: span 2
+    &__right
+      order: 1
+  .tagline
+    display: none
+  .items
+    grid-template-columns: 1fr
+    &.four-items, &.two-items
+      grid-template-columns: repeat(2, 1fr)
+    .header
+      font-size: 16px
+  .one-item
+    .item
+      margin-bottom: 30px
+      flex-direction: row
+      &:last-child
+        margin-bottom: 0
+      &__image, &__text
+        width: 100%
+  .price-table
+    width: 100%
+    display: block
+    overflow: auto
+    td
+      width: auto !important
+
+@media (max-width: 576px)
+  .btn
+    font-size: 1em
+    height: auto
+    padding: 10px
+    &_price
+      padding-left: 40px
+      width: 270px
+      &::before
+        left: 15px
+  .benefits
+    &-items
+      grid-template-columns: repeat(1, 1fr)
+  .scheme
+    &-items
+      grid-template-columns: repeat(1, 1fr)
+  .advantages
+    &-items
+      grid-template-columns: repeat(1, 1fr)
+  .clients
+    &-items
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr))
+  .intro__button
+    margin: 0
+  .intro__text
+    margin-bottom: 20px
+  .intro__bottom-text
+    min-width: 100%
+    margin-top: 20px
+    &::before
+      content: none
+  .modal-form__input
+    width: 100%
+  .items
+    &.four-items, &.two-items
+      grid-template-columns: 1fr
+
+@media (max-width: 450px)
+  .footer
+    &__inner
+      grid-template-columns: 1fr
+    &__middle
+      grid-column: span 1
+    &__right
+      text-align: left
+      padding-left: 15px
+      & > *:not(.email)
+        margin-left: -15px
+    .address
+      padding-left: 15px
+      &::before
+        right: auto
+        left: 0

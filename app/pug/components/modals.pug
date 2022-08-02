@@ -1,0 +1,22 @@
+.modal.mfp-hide#callback
+  h2.modal__header Обратный звонок
+  p.modal__subheader Оставьте заявку – перезвоним вам.
+  form.modal-form
+    input.modal-form__input.modal-form__name(type="text" name="name" placeholder="Имя")
+    input.modal-form__input.modal-form__phone(type="text" name="phone" placeholder="Телефон *" required)
+    label.modal-form__privacy
+      input(type="checkbox" required)
+      span Разрешить обработку #[a(href="#") персональных данных]
+    button.modal-form__button.btn.btn_green(type="submit") Перезвоните мне
+
+.modal.mfp-hide#consult
+  h2.modal__header Помощь с выбором спецтехники
+  p.modal__subheader Оставьте заявку – перезвоним вам, уточним задачу и порекомендуем оптимальную спецтехнику для ее решения.
+  form.modal-form
+    input.modal-form__input.modal-form__name(type="text" name="name" placeholder="Имя")
+    input.modal-form__input.modal-form__phone(type="text" name="phone" placeholder="Телефон *" required)
+    textarea.modal-form__textarea.modal-form__comment(name="comment" placeholder="Комментарий")
+    label.modal-form__privacy
+      input(type="checkbox" required)
+      span Разрешить обработку #[a(href="#") персональных данных]
+    button.modal-form__button.btn.btn_green(type="submit") Перезвоните мне

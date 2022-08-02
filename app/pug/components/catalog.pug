@@ -1,0 +1,71 @@
+-
+  var catalog = {
+    header: 'Аренда спецтехники для любых целей',
+    subheader: 'Жилищного и дорожного строительства, ремонта сетей и других работ',
+    items: [
+      {
+        image: 'img/catalog-01.jpg',
+        header: 'Автокраны',
+      },
+      {
+        image: 'img/catalog-02.jpg',
+        header: 'Автогидроподъемники',
+      },
+      {
+        image: 'img/catalog-03.jpg',
+        header: 'Катки',
+      },
+      {
+        image: 'img/catalog-04.jpg',
+        header: 'Полуприцепы',
+      },
+      {
+        image: 'img/catalog-05.jpg',
+        header: 'Погрузчики',
+      },
+      {
+        image: 'img/catalog-06.jpg',
+        header: 'Самосвалы',
+      },
+      {
+        image: 'img/catalog-07.jpg',
+        header: 'Экскаваторы гусеничные с навесным оборудованием (гидромолот)',
+      },
+      {
+        image: 'img/catalog-08.jpg',
+        header: 'Экскаваторы-погрузчики с навесным оборудованием (гидромолот)',
+      },
+      {
+        image: 'img/catalog-09.jpg',
+        header: 'Бортовой КАМАЗ',
+      },
+      {
+        image: 'img/catalog-10.jpg',
+        header: 'Экскаватор-планировщик TATRA UDS114R',
+      },
+      {
+        image: 'img/catalog-11.jpg',
+        header: 'Тралы',
+      },
+      {
+        text: 'Цены на услуги спецтехники в Самаре и Самарской области – <br><strong>в прайс-листе</strong>',
+        button: { href: '#', text: 'Открыть прайс-лист' }
+      },
+    ],
+  }
+
+.catalog#catalog
+  .container
+    h2.catalog__header.wow.fadeInDown(data-wow-duration="1s") !{catalog.header}
+    p.catalog__subheader.subheader.wow.fadeInDown(data-wow-delay=".5s" data-wow-duration="1s") !{catalog.subheader}
+    .catalog-items
+      each item in catalog.items
+        if item.header
+          a.catalog__item(href="#") 
+            span.catalog__item-image-part
+              img.catalog__item-image(src=item.image, alt='')
+            span.catalog__item-text-part !{item.header}
+        else
+          .catalog__item.catalog__item_text
+            p.catalog__item-text !{item.text}
+            a.catalog__item-button.btn.btn_green.btn_price(href=item.button.href) !{item.button.text}

@@ -1,0 +1,33 @@
+-
+  var benefits = {
+    items: [
+      {
+        image: 'img/sprite.svg#benefits-01',
+        text: 'Цена аренды спецтехники от 1&nbsp;000&nbsp;руб./час'
+      },
+      {
+        image: 'img/sprite.svg#benefits-02',
+        text: 'Подача на объект в срок за 2–3 дня после звонка'
+      },
+      {
+        image: 'img/sprite.svg#benefits-03',
+        text: 'Машины Liebherr, Caterpillar, Hitachi, XCMG и других брендов'
+      },
+      {
+        image: 'img/sprite.svg#benefits-04',
+        text: 'Скидки до 20% при большом объеме работ'
+      },
+    ],
+  }
+
+.benefits#benefits
+  .container
+    .benefits__parallax.parallax.skrollable.skrollable-between(data-top="transform: translateY(-30%);" data-bottom="transform: translateY(0%);")
+    h2.benefits__header !{benefits.header}
+    .benefits-items
+      each item in benefits.items
+        .benefits__item
+          .benefits__item-image-part
+            svg.benefits__item-image
+              use(xlink:href=item.image)
+          .benefits__item-text-part !{item.text}
